@@ -27,10 +27,14 @@ The following PHP libraries are required to be installed:
 - php-xml-parser 
 - php-xml-serializer 
 - php-xml-util 
- 
-Git clone this repository into your web server's directory.
 
-To test your installation, call the wsdl parse utility as follow:
+To deploy the code, run the following in document root of the your web server (e.g.: /var/www/. 
+
+  [sudo] git clone https://github.com/myGrid/WSDLUtils.git
+
+The library will reside in a folder called "WSDLUtils".
+
+To test your installation, call the parse utility as follow:
  
 http://<my server root>/WSDLUtils/WSDLUtils.php?method=parse&wsdl_uri="my test wsdl uri"
  
