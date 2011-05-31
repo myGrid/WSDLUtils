@@ -4,20 +4,19 @@
 # Institute (EMBL-EBI) and the University of Southampton.
 # See license.txt for details
 
-IMPORTANT NOTE (2010-04-13):
-This does not work with PHP 5.3 and greater. PHP 5.3 introduces the notion of "namespaces", but the WSDLUtils defines "Namespace" as a class and therefore PHP 5.3 borks when loading up the files. (See: http://forums.developer.mindtouch.com/showthread.php?t=6059 for an example).
 
 Introduction
 ------------
-The WSDLUtils Service was developed by Dan Mowbray for the EMBRACE web services registry. This registry is precursor to the
-the BioCatalogue.
+The WSDLUtils Service was developed by Dan Mowbray for the EMBRACE web services registry and is now being used in the BioCatalogue web services registry.
+
 
 Functions
 ---------
 The WDSDLUtils Service has two main functions:
  - parse a WDSL file into a format that is consumable by the BioCatalogue registry
  - track changes in a WSDL document
- 
+
+
 Installation
 ------------
 The utilities in this Service are written in PHP and hence would run on a web server with PHP enabled.
