@@ -10,7 +10,7 @@
 			
 			foreach($nss as $prefix => $url)
 			{
-				$ns = new Namespace();
+				$ns = new XMLNamespace();
 				$ns->setPrefix($prefix);
 				$ns->setURI($url);
                 

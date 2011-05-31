@@ -9,7 +9,7 @@ require_once('Type.php');
 require_once('TypedElement.php');
 require_once('WSDLXmlSchemaParser.php');
 require_once('Functions.php');
-require_once('Namespace.php');
+require_once('XMLNamespace.php');
 require_once('XMLSchema.php');
 
 class WSDLParser

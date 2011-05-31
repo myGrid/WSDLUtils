@@ -391,7 +391,7 @@ class WSDLXmlSchemaParser
 			
 			if(count($namesplit) == 1)
 			{
-				$ns = new Namespace();
+				$ns = new XMLNamespace();
 				$ns->setURI($this->currentSchema->getTarget());
 				$complexType->setNamespace($ns);
                 
@@ -449,7 +449,7 @@ class WSDLXmlSchemaParser
 			$simpleType->setName($nameText);
 			if(count($namesplit) == 1)
 			{
-				$ns = new Namespace();
+				$ns = new XMLNamespace();
 				$ns->setURI($this->currentSchema->getTarget());
 				$simpleType->setNamespace($ns);
 			}
@@ -476,7 +476,7 @@ class WSDLXmlSchemaParser
         {
             $baseTypeElement = new TypedElement();
             $baseTypeElement->setName('restriction');
-            $ns = new Namespace();
+            $ns = new XMLNamespace();
             $ns->setURI($this->currentSchema->getTarget());
             $baseTypeElement->setNamespace($ns);
 
@@ -741,7 +741,7 @@ class WSDLXmlSchemaParser
                 {
                     $type = new Type();
                     $type->setName($typeName);
-                    $targetNS = new Namespace();
+                    $targetNS = new XMLNamespace();
                     $targetNS->setURI($this->currentSchema->getTarget());
                     $type->setNamespace($targetNS);
 
@@ -753,7 +753,7 @@ class WSDLXmlSchemaParser
         {
             $type = new Type();
             $type->setName($typeName);
-            $targetNS = new Namespace();
+            $targetNS = new XMLNamespace();
             $targetNS->setURI($this->currentSchema->getTarget());
             $type->setNamespace($targetNS);
         }
@@ -777,7 +777,7 @@ class WSDLXmlSchemaParser
 			
 		if(count($namesplit) == 1)
 		{
-			$ns = new Namespace();
+			$ns = new XMLNamespace();
 			$ns->setURI($this->currentSchema->getTarget());
 			$element->setNamespace($ns);
 			$element->setName($elementName);
