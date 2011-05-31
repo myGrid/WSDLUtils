@@ -1,6 +1,6 @@
 <?php
 
-class Namespace
+class XMLNamespace
 {
 	private $prefix;
 	private $uri;
