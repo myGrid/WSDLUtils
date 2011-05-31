@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../common/xsl/report.xsl" type="text/xsl" ?>
+<report name="WS-I Basic Profile Conformance Report."    timestamp="2009-08-20T16:05:28.276"
+    xmlns="http://www.ws-i.org/testing/2004/07/report/"
+    xmlns:wsi-report="http://www.ws-i.org/testing/2004/07/report/"
+    xmlns:wsi-log="http://www.ws-i.org/testing/2004/07/log/"
+    xmlns:wsi-analyzerConfig="http://www.ws-i.org/testing/2004/07/analyzerConfig/"
+    xmlns:wsi-monConfig="http://www.ws-i.org/testing/2004/07/monitorConfig/"
+    xmlns:wsi-assertions="http://www.ws-i.org/testing/2004/07/assertions/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <analyzer version="1.1" releaseDate="2004-11-30">
+    <implementer name="Eclipse.org Organization" location="http://www.eclipse.org/wsvt"/>
+    <environment>
+      <runtime name="Java(TM) 2 Runtime Environment, Standard Edition" version="1.5.0_19-b02-306"/>
+      <operatingSystem name="Mac OS X" version="10.4.11"/>
+      <xmlParser name="Apache Xerces" version="Xerces-J 2.6.1"/>
+    </environment>
+    <wsi-analyzerConfig:configuration>
+      <wsi-analyzerConfig:verbose>false</wsi-analyzerConfig:verbose>
+      <wsi-analyzerConfig:assertionResults type="notInfo" messageEntry="true" assertionDescription="false" failureMessage="true" failureDetail="true"/>
+        <wsi-analyzerConfig:reportFile replace="true" location="/public_html/WSDLUtils/wsi_tools/wsi-test-tools/java/samples/report.xml">
+      <wsi-analyzerConfig:addStyleSheet href="../common/xsl/report.xsl" type="text/xsl" />
+        </wsi-analyzerConfig:reportFile>
+        <wsi-analyzerConfig:testAssertionsFile>/public_html/WSDLUtils/wsi_tools/wsi-test-tools/common/profiles/SSBP10_BP11_TAD.xml</wsi-analyzerConfig:testAssertionsFile>
+        <wsi-analyzerConfig:logFile correlationType="endpoint">/public_html/WSDLUtils/wsi_tools/wsi-test-tools/WSIMonitorOutput.xml~</wsi-analyzerConfig:logFile>
+      <wsi-analyzerConfig:wsdlReference>
+        <wsi-analyzerConfig:wsdlElement type="port" namespace="http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds" parentElementName="AnalysisWSAppLabImplService">cabri_getz_services.getCabriBacteriaEntriesByIds</wsi-analyzerConfig:wsdlElement>
+        <wsi-analyzerConfig:wsdlURI>http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds?wsdl</wsi-analyzerConfig:wsdlURI>
+      </wsi-analyzerConfig:wsdlReference>
+    </wsi-analyzerConfig:configuration>
+  </analyzer>
+
+  <artifact type="discovery">
+    <entry type="[discovery]" >
+      <assertionResult id="BP3001" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP3002" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP3003" result="missingInput">
+      </assertionResult>
+    </entry>
+  </artifact>
+  <artifact type="description">
+    <entry type="definitions" referenceID="http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds?wsdl">
+      <assertionResult id="BP2201" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2700" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2701" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2703" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2034" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2018" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2101" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2103" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2104" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2105" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2416" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2417" result="failed">
+        <failureMessage xml:lang="en">A QName reference that is referring to a schema component, uses a namespace not defined in the targetNamespace attribute on the xs:schema element, or in the namespace attribute on an xs:import element within the xs:schema element.</failureMessage>
+      <failureDetail xml:lang="en" >{http://schemas.xmlsoap.org/soap/encoding/}string
+      </failureDetail>
+      </assertionResult>
+      <assertionResult id="BP2123" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="types" referenceID="http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds?wsdl-Types">
+      <assertionResult id="BP2202" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2102" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2011" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2107" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2108" result="failed">
+        <failureMessage xml:lang="en">An Array declaration uses - restricts or extends - the soapenc:Array type, or the wsdl:arrayType attribute is used in the type declaration.</failureMessage>
+      <failureDetail xml:lang="en" >{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}ArrayOf_apachesoap_Map,
+{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}ArrayOf_soapenc_string
+      </failureDetail>
+      </assertionResult>
+      <assertionResult id="BP2110" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2122" result="failed">
+        <failureMessage xml:lang="en">A wsdl:types element contained a data type definition that is not an XML schema definition.</failureMessage>
+      <failureDetail xml:lang="en" >Schema is structurally invalid.
+Fatal error: The prefix &quot;wsdl&quot; for attribute &quot;wsdl:arrayType&quot; associated with an element type &quot;attribute&quot; is not bound.
+
+      </failureDetail>
+      </assertionResult>
+    </entry>
+    <entry type="import" referenceID="[import]">
+      <assertionResult id="BP2098" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP2803" result="missingInput">
+      </assertionResult>
+    </entry>
+    <entry type="binding" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}cabri_getz_services.getCabriBacteriaEntriesByIdsSoapBinding">
+      <assertionResult id="BP2020" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2021" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2402" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2022" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2032" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2404" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2012" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2406" result="failed">
+        <failureMessage xml:lang="en">The use attribute of a soapbind:body, soapbind:fault, soapbind:header and soapbind:headerfault does not have value of &quot;literal&quot;.</failureMessage>
+      <failureDetail xml:lang="en" >SOAPFault ({http://schemas.xmlsoap.org/wsdl/soap/}fault):
+required=null
+name=SoaplabException
+use=encoded
+encodingStyles=[http://schemas.xmlsoap.org/soap/encoding/]
+namespaceURI=http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds
+      </failureDetail>
+      </assertionResult>
+      <assertionResult id="BP2019" result="prereqFailed">
+        <prereqFailedList>
+          <testAssertionID>BP2406</testAssertionID>
+        </prereqFailedList>
+      </assertionResult>
+      <assertionResult id="BP2013" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2017" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2111" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2112" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2113" result="failed">
+        <failureMessage xml:lang="en">The soapbind:header, soapbind:headerfault or soapbind:fault elements refer to wsd:part element(s) that are not defined using only the &quot;element&quot; attribute.</failureMessage>
+      <failureDetail xml:lang="en" >{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}cabri_getz_services.getCabriBacteriaEntriesByIdsSoapBinding:fault
+      </failureDetail>
+      </assertionResult>
+      <assertionResult id="BP2117" result="prereqFailed">
+        <prereqFailedList>
+          <testAssertionID>BP2406</testAssertionID>
+        </prereqFailedList>
+      </assertionResult>
+      <assertionResult id="BP2118" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2114" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2119" result="notApplicable">
+      </assertionResult>
+      <assertionResult id="BP2120" result="passed">
+      </assertionResult>
+      <assertionResult id="SSBP2209" result="passed">
+      </assertionResult>
+      <assertionResult id="SSBP2403" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="portType" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}AnalysisWSAppLabImpl">
+      <assertionResult id="BP2010" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="run">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="destroy">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="terminate">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getStatus">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="describe">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getInputSpec">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getResultSpec">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getAnalysisType">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="createJob">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="runNotifiable">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="createAndRun">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="createAndRunNotifiable">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="waitFor">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="runAndWaitFor">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getResults">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getLastEvent">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getNotificationDescriptor">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getCreated">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getStarted">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getEnded">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getElapsed">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getCharacteristics">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="operation" referenceID="getSomeResults">
+      <assertionResult id="BP2208" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2014" result="notApplicable">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getStatusResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getResultSpecResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getSomeResultsRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getCreatedRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}createAndRunNotifiableResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}waitForRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getInputSpecRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}destroyResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}terminateResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}runNotifiableResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}createAndRunNotifiableRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getStartedResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getResultsRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getStatusRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getNotificationDescriptorRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getLastEventRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getResultSpecRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getSomeResultsResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getElapsedResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}terminateRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}waitForResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}destroyRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}createJobResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getResultsResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getCreatedResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}runAndWaitForResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}runResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}createAndRunResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getStartedRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}describeRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}createAndRunRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}runRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getNotificationDescriptorResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}SoaplabException">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getEndedRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}createJobRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getLastEventResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getCharacteristicsResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getEndedResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getAnalysisTypeRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}runNotifiableRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getCharacteristicsRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}runAndWaitForRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getInputSpecResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getElapsedRequest">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}describeResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+    <entry type="message" referenceID="{http://bioinformatics.istge.it:8080/axis/services/cabri_getz_services.getCabriBacteriaEntriesByIds}getAnalysisTypeResponse">
+      <assertionResult id="BP2115" result="passed">
+      </assertionResult>
+      <assertionResult id="BP2116" result="passed">
+      </assertionResult>
+    </entry>
+  </artifact>
+  <artifact type="message">
+    <entry type="[message]" >
+      <assertionResult id="BP1004" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1006" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1116" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1002" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1001" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1010" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1101" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1103" result="missingInput">
+      </assertionResult>
+      <assertionResult id="SSBP1003" result="missingInput">
+      </assertionResult>
+      <assertionResult id="SSBP5100" result="missingInput">
+      </assertionResult>
+      <assertionResult id="SSBP5101" result="missingInput">
+      </assertionResult>
+    </entry>
+  </artifact>
+  <artifact type="envelope">
+    <entry type="[envelope]" >
+      <assertionResult id="BP1107" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1601" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1201" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1701" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1308" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1011" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1013" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1204" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1301" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1305" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1306" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1031" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1032" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1033" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1316" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1307" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1202" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1318" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1008" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1211" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1212" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1213" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1214" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1755" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1005" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1302" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1203" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1100" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1600" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1012" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1007" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1208" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1009" result="missingInput">
+      </assertionResult>
+      <assertionResult id="BP1309" result="missingInput">
+      </assertionResult>
+      <assertionResult id="SSBP1601" result="missingInput">
+      </assertionResult>
+      <assertionResult id="SSBP9704" result="missingInput">
+      </assertionResult>
+    </entry>
+  </artifact>
+  <summary result="failed">
+  </summary>
+</report>

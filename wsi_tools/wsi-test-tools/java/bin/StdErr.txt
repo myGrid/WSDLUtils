@@ -1,0 +1,10 @@
+EXCEPTION: java.net.SocketException: Socket closed
+EXCEPTION: java.net.SocketException: Socket closed
+EXCEPTION: java.net.SocketException: Socket closed
+EXCEPTION: java.net.SocketException: Socket closed
+n: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.add(ApplicationShutdownHooks.java:39)
+	at java.lang.Runtime.addShutdownHook(Runtime.java:192)
+	at org.wsi.test.monitor.Monitor.<init>(Unknown Source)
+	at org.wsi.test.monitor.Monitor.main(Unknown Source)
+EXCEPTION: java.net.BindException: Address already in use

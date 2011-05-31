@@ -1,0 +1,4 @@
+Default WSI home directory
+Set classpath
+Set Java options
+Analyzer Stopped By Exception: java.lang.NullPointerException.

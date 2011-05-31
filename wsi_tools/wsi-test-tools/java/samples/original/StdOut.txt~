@@ -1,0 +1,4 @@
+Default WSI home directory
+Set classpath
+Set Java options
+Analyzer Error: Analyzer configuration file was not found.  Specified file location: /Home/bccs/alil/applications/wsi-test-tools/java/samples/orignonal/analyzerConfig.xml.
