@@ -1,13 +1,13 @@
 <?php
 
-//NON-PROXY
-//$opts = array('http' => array('user_agent' => 'PHP libxml agent',));
+//NON-PROXY OPTS
+$opts = array('http' => array('user_agent' => 'PHP libxml agent'));
 
 
 //PROXY OPTS
-//$opts = array('http' => array('proxy' => 'tcp://127.0.0.1:8080', 'request_fulluri' => true));
-//$context = stream_context_create($opts);
+//$opts = array('http' => array('proxy' => 'http://127.0.0.1:8080', 'request_fulluri' => true, 'user_agent' => 'PHP libxml agent'));
 
+$context = stream_context_create($opts);
 
 $wsi_install_path = dirname(__FILE__) . "/wsi_tools";
 include_once('./WSDLParser/WSDLParser.php');

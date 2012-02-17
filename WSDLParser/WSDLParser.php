@@ -32,7 +32,7 @@ class WSDLParser
         
 		$this->wsdlfile = $url;
 		$this->XDoc = new DOMDocument();
-        //libxml_set_streams_context($context);
+    libxml_set_streams_context($context);
 		if($this->XDoc->load($this->wsdlfile))
 		{
             
