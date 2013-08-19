@@ -13,22 +13,22 @@ $wsi_install_path = dirname(__FILE__) . "/wsi_tools";
 include_once('./WSDLParser/WSDLParser.php');
 include_once('ValidatorWrapper.php');
 
-if((!is_null($_POST['wsdl_uri']) && !is_null($_POST['method'])) || (!is_null($_GET['wsdl_uri']) && !is_null($_GET['method'])))
+if(( (array_key_exists('wsdl_uri', $_POST) && !is_null($_POST['wsdl_uri'])) && (array_key_exists('method', $_POST) && !is_null($_POST['method']))) || ( (array_key_exists('wsdl_uri', $_GET) && !is_null($_GET['wsdl_uri'])) && (array_key_exists('method', $_GET) && !is_null($_GET['method'])) ))
 {
-    if(!is_null($_POST['wsdl_uri']))
+    if(array_key_exists('wsdl_uri', $_POST) && !is_null($_POST['wsdl_uri']))
     {
         $wsdlURI = $_POST['wsdl_uri'];
     }
-    elseif(!is_null($_GET['wsdl_uri']))
+    elseif(array_key_exists('wsdl_uri', $_GET) && !is_null($_GET['wsdl_uri']))
     {
         $wsdlURI = $_GET['wsdl_uri'];
     }
 
-    if(!is_null($_POST['method']))
+    if(array_key_exists('method', $_POST) && !is_null($_POST['method']))
     {
         $method = $_POST['method'];
     }
-    else
+    elseif(array_key_exists('method', $_GET) && !is_null($_GET['method']))
     {
         $method = $_GET['method'];
     }
