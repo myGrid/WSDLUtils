@@ -32,7 +32,7 @@ class ValidatorWrapper
 
 
         $validation_output;
-        exec('java -classpath '. $wsi_install_path . '/net/embraceregistry/wsianalyzer/ -jar ' . $wsi_install_path . '/net/embraceregistry/wsianalyzer/runanalyzer.jar ' . $this->uri, &$validation_output);
+        exec('java -classpath '. $wsi_install_path . '/net/embraceregistry/wsianalyzer/ -jar ' . $wsi_install_path . '/net/embraceregistry/wsianalyzer/runanalyzer.jar ' . $this->uri, $validation_output);
 
         
       
@@ -61,7 +61,7 @@ class ValidatorWrapper
        
         global $wsi_install_path;
         $error_output;
-        exec('java -classpath '. $wsi_install_path . '/net/embraceregistry/wsianalyzer/ -jar ' . $wsi_install_path . '/net/embraceregistry/wsianalyzer/reportparser.jar', &$error_output);
+        exec('java -classpath '. $wsi_install_path . '/net/embraceregistry/wsianalyzer/ -jar ' . $wsi_install_path . '/net/embraceregistry/wsianalyzer/reportparser.jar', $error_output);
         
         $result = trim($error_output[1]);
         $returnData = array();
