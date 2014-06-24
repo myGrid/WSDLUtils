@@ -69,8 +69,12 @@ class WSDLParser
 			$typesdefined = $this->XDoc->getElementsByTagName('schema');
 			if($typesdefined->item(0) != NULL && $typesdefined->length > 0)
 			{ 
+				error_log("WSDLUtils: XSD parser started.");
+				
 				$this->xsdParser->parse();
-               
+				
+				error_log("WSDLUtils: XSD parser finished.");
+				               
 			}
 			$this->parseService();
 			return $this->service;
@@ -79,6 +83,7 @@ class WSDLParser
 		{
             
             $this->errorString = $ex->getMessage();
+            error_log($ex->getMessage());
 			throw $ex;
 		}
 	}
@@ -167,6 +172,12 @@ class WSDLParser
                             $style = $soapNode->getAttribute('style');
                             $port->setStyle($style);
                             $protocol = $soapNode->getAttribute('transport');
+                            
+                            // Disregard all ports that do not have bindings using SOAP over HTTP protocol 
+                            // as we only care about those
+                            if ($protocol != "http://schemas.xmlsoap.org/soap/http"){
+                            	continue;
+                            }                      
                             $port->setProtocol($protocol);
                         }
                         //echo'About to parse operations.<br />';

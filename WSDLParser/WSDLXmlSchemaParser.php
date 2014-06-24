@@ -104,12 +104,16 @@ class WSDLXmlSchemaParser
                     $this->currentSchema->setNamespaces(parseNamespaces($this->domdoc));
                     
                     $this->parseImports();
+                    error_log("WSDLUtils: parsed the XSD imports.");
+                    
                     $this->parseIncludes();
-                   
+                    error_log("WSDLUtils: parsed the XSD includes.");
+                    
                     $this->parseNamedTypes();
-                   
+                    error_log("WSDLUtils: parsed the complex and simple types.");
+                    
                     $this->parseElements();
-                   
+                    error_log("WSDLUtils: parsed the XSD schema elements.");                    
 
                     $namespaces = $this->currentSchema->getNamespaces();
 
